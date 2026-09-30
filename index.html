@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Абсолют Авто 56 — грузоперевозки в Оренбурге</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("absavto-theme");
+        if (saved === "dark" || saved === "light") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atm-orb atm-orb-a"></div>
+    <div class="atm-orb atm-orb-b"></div>
+    <div class="atm-grid"></div>
+    <div class="atm-road"></div>
+  </div>
+
+  <header class="top">
+    <a class="brand-mark" href="#top">Абсолют Авто <span>56</span></a>
+    <div class="top-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <span class="when-light">Тёмная</span>
+        <span class="when-dark">Светлая</span>
+      </button>
+      <a class="top-call" href="tel:+73532292222">Звонок</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="brand-hero">Абсолют Авто 56</p>
+      <h1>Груз по городу — быстро и без сюрпризов</h1>
+      <div class="price-block">
+        <span class="price-label">от</span>
+        <span class="price-value">1 800 ₽</span>
+      </div>
+      <p class="lead">Свой автопарк · подача в день заказа · аккуратные грузчики</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+73532292222">
+          <span>Позвонить</span>
+          <small>29-22-22</small>
+        </a>
+        <a class="btn btn-ghost" href="#order">Оставить номер</a>
+      </div>
+      <ul class="hero-pills" aria-label="Коротко о компании">
+        <li>15+ лет</li>
+        <li>Оренбург</li>
+        <li>Свой транспорт</li>
+      </ul>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-head">
+        <p class="eyebrow">Услуги</p>
+        <h2>Что нужно перевезти?</h2>
+      </div>
+      <ul class="service-list">
+        <li>
+          <div>
+            <h3>Газель по городу</h3>
+            <p>Быстрая подача по Оренбургу</p>
+          </div>
+          <span class="service-price">от 1 800 ₽</span>
+        </li>
+        <li>
+          <div>
+            <h3>Квартирный переезд</h3>
+            <p>С грузчиками под ключ</p>
+          </div>
+          <span class="service-price">от 3 500 ₽</span>
+        </li>
+        <li>
+          <div>
+            <h3>Стройматериалы</h3>
+            <p>От склада до объекта</p>
+          </div>
+          <span class="service-price">от 2 000 ₽</span>
+        </li>
+        <li>
+          <div>
+            <h3>Негабарит</h3>
+            <p>Подберём машину под груз</p>
+          </div>
+          <span class="service-price">по маршруту</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="trust" id="why">
+      <div class="section-head">
+        <p class="eyebrow">Доверие</p>
+        <h2>Почему заказывают у нас</h2>
+      </div>
+      <div class="trust-grid">
+        <article>
+          <span class="trust-num">01</span>
+          <strong>Свой автопарк</strong>
+          <p>Не посредники — свои машины и водители</p>
+        </article>
+        <article>
+          <span class="trust-num">02</span>
+          <strong>Цена понятна</strong>
+          <p>Сразу говорим стоимость, без «потом доплатите»</p>
+        </article>
+        <article>
+          <span class="trust-num">03</span>
+          <strong>До двери</strong>
+          <p>Погрузка, крепление, аккуратная выгрузка</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="order" id="order">
+      <div class="order-panel">
+        <p class="eyebrow">Заявка</p>
+        <h2>Машина нужна сегодня?</h2>
+        <p class="order-lead">Оставьте номер — диспетчер перезвонит за минуту</p>
+        <form class="order-form" action="#" method="post">
+          <label>
+            Имя
+            <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" />
+          </label>
+          <label>
+            Телефон
+            <input type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Жду звонка</button>
+        </form>
+        <a class="order-phone" href="tel:+73532292222">+7 (3532) 29-22-22</a>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="section-head">
+        <p class="eyebrow">Контакты</p>
+        <h2>Оренбург</h2>
+      </div>
+      <address>
+        <a class="contacts-phone" href="tel:+73532292222">+7 (3532) 29-22-22</a>
+        <p>ул. Томилинская, 237, офис 216</p>
+        <p>Абсолют Авто 56 · ежедневно</p>
+      </address>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Абсолют Авто 56</p>
+  </footer>
+
+  <a class="call-bar" href="tel:+73532292222">
+    <span>Позвонить</span>
+    <strong>29-22-22</strong>
+  </a>
+  <script src="script.js"></script>
+</body>
+</html>
