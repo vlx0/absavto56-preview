@@ -166,13 +166,16 @@ a {
 
 .theme-toggle,
 .top-call {
-  min-height: 2.4rem;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
   border-radius: 999px;
   font: inherit;
   font-size: 0.8rem;
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
+  padding: 0.45rem 0.95rem;
   cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .theme-toggle {
@@ -202,6 +205,7 @@ html[data-theme="light"] .theme-toggle .when-dark {
 .hero {
   position: relative;
   isolation: isolate;
+  min-height: calc(100vh - 4.4rem);
   min-height: calc(100svh - 4.4rem);
   display: flex;
   flex-direction: column;
@@ -221,7 +225,8 @@ html[data-theme="light"] .theme-toggle .when-dark {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 46% 72%;
+  /* iPhone portrait: keep gazelle + Gruzilkin banner in frame */
+  object-position: 38% 78%;
   transform: scale(1.01);
   animation: hero-ken 22s ease-in-out infinite alternate;
 }
@@ -253,7 +258,7 @@ html[data-theme="light"] .theme-toggle .when-dark {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 1.6rem var(--pad) 2.2rem;
+  padding: 1.6rem var(--pad) calc(5.2rem + var(--safe-bottom));
   animation: rise 0.75s ease-out both;
 }
 
@@ -607,20 +612,21 @@ html[data-theme="light"] .order-form input {
 
 .call-bar {
   position: fixed;
-  left: 0.75rem;
-  right: 0.75rem;
+  left: max(0.75rem, env(safe-area-inset-left, 0px));
+  right: max(0.75rem, env(safe-area-inset-right, 0px));
   bottom: calc(0.7rem + var(--safe-bottom));
   z-index: 40;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  min-height: 3.35rem;
+  min-height: 3.5rem;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: var(--accent-ink);
   font-weight: 800;
   box-shadow: 0 16px 36px rgba(255, 122, 26, 0.4);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .call-bar strong {
@@ -701,5 +707,19 @@ html[data-theme="light"] .order-form input {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    min-height: calc(100vh - 4.4rem);
+    min-height: -webkit-fill-available;
+    min-height: calc(100svh - 4.4rem);
+  }
+
+  .btn,
+  .call-bar,
+  .top-call {
+    cursor: default;
   }
 }
