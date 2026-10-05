@@ -259,7 +259,8 @@ html[data-theme="light"] .theme-toggle .when-dark {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
-  padding: clamp(1.2rem, 4vh, 2.2rem) var(--pad) calc(5.2rem + var(--safe-bottom));
+  /* text higher under sticky header */
+  padding: 0.35rem var(--pad) calc(5.2rem + var(--safe-bottom));
   animation: rise 0.75s ease-out both;
 }
 
@@ -643,19 +644,15 @@ html[data-theme="light"] .order-form input {
 
   .hero {
     min-height: min(92svh, 820px);
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-inner {
-    padding: 4.5rem var(--pad) 3.4rem;
+    padding: 0.8rem var(--pad) 3.4rem;
   }
 
   .hero-bg img {
     object-position: 45% 62%;
-  }
-
-  .hero-inner {
-    padding-top: 2.8rem;
   }
 
   .cta-row {
