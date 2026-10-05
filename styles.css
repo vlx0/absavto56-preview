@@ -209,7 +209,7 @@ html[data-theme="light"] .theme-toggle .when-dark {
   min-height: calc(100svh - 4.4rem);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 0;
   overflow: hidden;
   color: #f4f1ea;
@@ -225,9 +225,9 @@ html[data-theme="light"] .theme-toggle .when-dark {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* iPhone portrait: keep gazelle + Gruzilkin banner in frame */
-  object-position: 38% 78%;
-  transform: scale(1.01);
+  /* van forward; keep Gruzilkin banner readable */
+  object-position: 42% 70%;
+  transform: scale(1.02);
   animation: hero-ken 22s ease-in-out infinite alternate;
 }
 
@@ -239,16 +239,17 @@ html[data-theme="light"] .theme-toggle .when-dark {
   background:
     linear-gradient(
       180deg,
-      rgba(10, 14, 20, 0.42) 0%,
-      rgba(10, 14, 20, 0.08) 32%,
-      rgba(10, 14, 20, 0.12) 52%,
-      rgba(10, 14, 20, 0.72) 100%
+      rgba(10, 14, 20, 0.55) 0%,
+      rgba(10, 14, 20, 0.22) 18%,
+      rgba(10, 14, 20, 0.05) 42%,
+      rgba(10, 14, 20, 0.08) 68%,
+      rgba(10, 14, 20, 0.55) 100%
     ),
     linear-gradient(
-      100deg,
-      rgba(10, 14, 20, 0.55) 0%,
-      rgba(10, 14, 20, 0.18) 28%,
-      rgba(10, 14, 20, 0) 48%
+      105deg,
+      rgba(10, 14, 20, 0.4) 0%,
+      rgba(10, 14, 20, 0.12) 32%,
+      rgba(10, 14, 20, 0) 55%
     );
 }
 
@@ -258,7 +259,7 @@ html[data-theme="light"] .theme-toggle .when-dark {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 1.6rem var(--pad) calc(5.2rem + var(--safe-bottom));
+  padding: clamp(1.2rem, 4vh, 2.2rem) var(--pad) calc(5.2rem + var(--safe-bottom));
   animation: rise 0.75s ease-out both;
 }
 
@@ -650,7 +651,11 @@ html[data-theme="light"] .order-form input {
   }
 
   .hero-bg img {
-    object-position: 40% 65%;
+    object-position: 45% 62%;
+  }
+
+  .hero-inner {
+    padding-top: 2.8rem;
   }
 
   .cta-row {
